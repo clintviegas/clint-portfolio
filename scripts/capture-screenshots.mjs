@@ -6,11 +6,13 @@ const __dirname = path.dirname(fileURLToPath(import.meta.url));
 
 const shots = [
   { url: "https://www.celpipace.ca", file: "celpipace.png" },
-  { url: "https://services.rekart.ae", file: "rekart.png" },
+  { url: "https://rekart.ae", file: "rekart-ae.png" },
   { url: "https://scalify.ae", file: "scalify.png", waitUntil: "domcontentloaded" },
   { url: "https://celeson-website.vercel.app/", file: "celeson.png", waitUntil: "domcontentloaded" },
   { url: "https://vibewithgannu.vercel.app/", file: "ganesh.png", waitUntil: "domcontentloaded" },
   { url: "https://winklmayrsalesdashboard.vercel.app", file: "dashboard.png" },
+  { url: "https://leo-website-kohl.vercel.app/", file: "leo-india.png", waitUntil: "domcontentloaded" },
+  { url: "https://demo.gaurabbhandari.com/", file: "gaurab-bhandari.png", waitUntil: "domcontentloaded" },
 ];
 
 const browser = await chromium.launch();

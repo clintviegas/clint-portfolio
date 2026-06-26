@@ -1,5 +1,5 @@
 import Link from "next/link";
-import { siteConfig, whatsappLink } from "@/data/portfolio";
+import { emailLink, whatsappLink } from "@/data/portfolio";
 import { Reveal } from "./Reveal";
 
 export function Contact() {
@@ -16,10 +16,10 @@ export function Contact() {
             </p>
             <div className="mt-8 flex flex-col items-center justify-center gap-3 sm:flex-row">
               <Link href={whatsappLink} target="_blank" rel="noopener noreferrer" className="btn-wa">
-                WhatsApp {siteConfig.whatsappDisplay}
+                WhatsApp me
               </Link>
-              <Link href={`mailto:${siteConfig.email}`} className="btn-secondary">
-                {siteConfig.email}
+              <Link href={emailLink} className="btn-secondary">
+                Email me
               </Link>
             </div>
           </div>

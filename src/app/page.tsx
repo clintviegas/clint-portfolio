@@ -3,6 +3,7 @@ import { Hero } from "@/components/Hero";
 import { Proof } from "@/components/Proof";
 import { WorkMarquee } from "@/components/WorkMarquee";
 import { Work } from "@/components/Work";
+import { Demos } from "@/components/Demos";
 import { Services } from "@/components/Services";
 import { FounderNote } from "@/components/FounderNote";
 import { Process } from "@/components/Process";
@@ -21,6 +22,7 @@ export default function HomePage() {
         <WorkMarquee />
         <Proof />
         <Work />
+        <Demos />
         <Services />
         <FounderNote />
         <Process />

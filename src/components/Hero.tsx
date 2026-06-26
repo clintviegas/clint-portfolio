@@ -26,8 +26,8 @@ export function Hero() {
             </Reveal>
             <Reveal delay={0.1}>
               <p className="mt-6 max-w-lg text-base leading-relaxed text-muted md:text-lg">
-                I&apos;m {siteConfig.name} — freelance developer for businesses in Canada, the UAE,
-                and worldwide. One partner from idea to launch.
+                I&apos;m {siteConfig.name} — freelance developer for businesses worldwide.
+                One partner from idea to launch.
               </p>
             </Reveal>
             <Reveal delay={0.15}>

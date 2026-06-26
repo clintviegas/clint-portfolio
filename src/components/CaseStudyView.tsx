@@ -2,10 +2,13 @@ import Image from "next/image";
 import Link from "next/link";
 import { ArrowLeft, ArrowUpRight } from "lucide-react";
 import type { Project } from "@/data/portfolio";
-import { projects, siteConfig, whatsappLink } from "@/data/portfolio";
+import { emailLink, projects, whatsappLink } from "@/data/portfolio";
 
 export function CaseStudyView({ project }: { project: Project }) {
-  const others = projects.filter((p) => p.slug !== project.slug && p.featured).slice(0, 3);
+  const isDemo = project.kind === "demo";
+  const others = projects
+    .filter((p) => p.slug !== project.slug && p.featured && p.kind === project.kind)
+    .slice(0, 3);
 
   return (
     <>
@@ -20,10 +23,15 @@ export function CaseStudyView({ project }: { project: Project }) {
           </Link>
 
           <p className="eyebrow mt-8 mb-4">
-            Case study · {project.category}
+            {isDemo ? "UI/UX demo" : "Case study"} · {project.category}
             {project.year ? ` · ${project.year}` : ""}
           </p>
           <h1 className="headline max-w-3xl">{project.title}</h1>
+          {isDemo && (
+            <p className="mt-3 inline-flex rounded-full border border-border px-3 py-1 text-xs text-muted">
+              {project.vertical} · Demo template
+            </p>
+          )}
           <p className="mt-6 max-w-2xl text-lg text-muted">{project.description}</p>
 
           <div className="mt-8 flex flex-wrap gap-3">
@@ -34,12 +42,12 @@ export function CaseStudyView({ project }: { project: Project }) {
                 rel="noopener noreferrer"
                 className="btn-primary"
               >
-                Visit live site
+                {isDemo ? "View live demo" : "Visit live site"}
                 <ArrowUpRight size={16} />
               </Link>
             )}
             <Link href={whatsappLink} target="_blank" rel="noopener noreferrer" className="btn-secondary">
-              Start a similar project
+              {isDemo ? "Build something like this" : "Start a similar project"}
             </Link>
           </div>
 
@@ -109,18 +117,27 @@ export function CaseStudyView({ project }: { project: Project }) {
 
         <div className="border-t border-border bg-background-elevated">
           <div className="wrap section text-center">
-            <h2 className="font-display text-2xl md:text-3xl">Want something similar?</h2>
+            <h2 className="font-display text-2xl md:text-3xl">
+              {isDemo ? "Want a site like this?" : "Want something similar?"}
+            </h2>
             <p className="mx-auto mt-4 max-w-md text-muted">
-              Message me on WhatsApp — I&apos;ll reply within 24 hours with next steps.
+              {isDemo
+                ? "These demos show what's possible in your vertical. Message me on WhatsApp — I'll reply within 24 hours."
+                : "Message me on WhatsApp — I'll reply within 24 hours with next steps."}
             </p>
-            <Link
-              href={whatsappLink}
-              target="_blank"
-              rel="noopener noreferrer"
-              className="btn-wa mt-8"
-            >
-              WhatsApp {siteConfig.whatsappDisplay}
-            </Link>
+            <div className="mt-8 flex flex-wrap justify-center gap-3">
+              <Link
+                href={whatsappLink}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="btn-wa"
+              >
+                WhatsApp me
+              </Link>
+              <Link href={emailLink} className="btn-secondary">
+                Email me
+              </Link>
+            </div>
           </div>
         </div>
       </article>
@@ -128,7 +145,9 @@ export function CaseStudyView({ project }: { project: Project }) {
       {others.length > 0 && (
         <section className="border-t border-border">
           <div className="wrap section">
-            <h2 className="font-display text-2xl">More case studies</h2>
+            <h2 className="font-display text-2xl">
+              {isDemo ? "More UI/UX demos" : "More case studies"}
+            </h2>
             <div className="mt-8 grid gap-4 sm:grid-cols-3">
               {others.map((p) => (
                 <Link

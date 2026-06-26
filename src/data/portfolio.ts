@@ -5,7 +5,7 @@ export const siteConfig = {
   whatsapp: "+17788699298",
   whatsappDisplay: "+1 (778) 869-9298",
   description:
-    "Freelance developer building websites, web apps, and SaaS for businesses in Canada, UAE, and worldwide.",
+    "Freelance developer building websites, web apps, and SaaS for businesses worldwide.",
   tagline: "Websites, apps & software — built to grow your business.",
   keywords: [
     "Clint Viegas",
@@ -17,7 +17,7 @@ export const siteConfig = {
     "freelance software developer",
   ],
   availability: "Open for new projects",
-  location: "Vancouver, Canada · Remote worldwide",
+  location: "Based in Vancouver · Available worldwide",
   responseTime: "Replies within 24 hours",
 };
 
@@ -25,11 +25,13 @@ export type Project = {
   slug: string;
   title: string;
   category: string;
+  vertical: string;
   description: string;
   outcome: string;
   liveUrl?: string;
   featured: boolean;
   highlight?: boolean;
+  kind: "production" | "demo";
   image: string;
   year?: string;
   seoTitle: string;
@@ -47,11 +49,13 @@ export const projects: Project[] = [
     slug: "celpipace",
     title: "CELPIPACE",
     category: "Education · SaaS",
+    vertical: "EdTech",
     description: "Full CELPIP prep platform — mock exams, subscriptions, live scoring.",
     outcome: "Live at celpipace.ca",
     liveUrl: "https://www.celpipace.ca",
     featured: true,
     highlight: true,
+    kind: "production",
     image: "/projects/celpipace.png",
     year: "2025",
     seoTitle: "CELPIPACE Case Study — CELPIP Prep SaaS Platform",
@@ -73,42 +77,46 @@ export const projects: Project[] = [
     region: "Canada",
   },
   {
-    slug: "rekart-mailer",
-    title: "Rekart Mailer",
-    category: "Marketing · SaaS",
-    description: "Email automation and client portal powering Rekart operations.",
-    outcome: "Live at services.rekart.ae",
-    liveUrl: "https://services.rekart.ae",
+    slug: "rekart-ae",
+    title: "Rekart",
+    category: "E-commerce · UAE",
+    vertical: "Retail & E-commerce",
+    description: "Rekart's main e-commerce platform — product catalog, brand presence, and customer-facing storefront.",
+    outcome: "Live at rekart.ae",
+    liveUrl: "https://rekart.ae",
     featured: true,
     highlight: true,
-    image: "/projects/rekart.png",
+    kind: "production",
+    image: "/projects/rekart-ae.png",
     year: "2025",
-    seoTitle: "Rekart Mailer Case Study — Email Marketing Platform",
+    seoTitle: "Rekart Case Study — E-commerce Platform UAE",
     seoDescription:
-      "Case study: building Rekart Mailer — a production email marketing and automation platform at services.rekart.ae for campaign management and client operations.",
+      "Case study: Rekart e-commerce platform at rekart.ae — retail storefront and brand web presence built for the UAE market.",
     challenge:
-      "Rekart needed a reliable email marketing and automation platform to run campaigns, manage clients, and handle day-to-day marketing operations — not a third-party tool with limits, but their own production system.",
+      "Rekart needed a polished e-commerce web presence that represents their brand, showcases products, and serves customers across the UAE with a professional, trustworthy online experience.",
     solution:
-      "Built a secure marketing platform with campaign management, automation workflows, a client-facing portal, and admin tooling designed for daily operational use at scale.",
+      "Designed and developed the Rekart storefront and brand site — clean product presentation, mobile-first layout, and a customer experience aligned with Rekart's retail operations.",
     results: [
-      "Production platform running at services.rekart.ae",
-      "Campaign and automation workflows for daily ops",
-      "Secure admin portal for the Rekart team",
-      "Multi-tenant architecture for client management",
+      "Live e-commerce presence at rekart.ae",
+      "Brand-aligned storefront for UAE customers",
+      "Mobile-first shopping experience",
+      "Integrated with Rekart's broader ops stack",
     ],
-    deliverables: ["Marketing platform", "Automation flows", "Admin portal", "Client management"],
-    role: "Lead developer — architecture, build, and deployment",
+    deliverables: ["E-commerce website", "Brand storefront", "Product catalog", "Mobile UX"],
+    role: "Developer — design and build",
     region: "UAE",
   },
   {
     slug: "scalify",
     title: "Scalify",
     category: "Brand · Web",
+    vertical: "Creative Agency",
     description: "Full brand website and career platform for scalify.ae.",
     outcome: "Live at scalify.ae",
     liveUrl: "https://scalify.ae",
     featured: true,
     highlight: true,
+    kind: "production",
     image: "/projects/scalify.png",
     year: "2025",
     seoTitle: "Scalify Case Study — Brand Website & Career Platform",
@@ -132,6 +140,8 @@ export const projects: Project[] = [
     slug: "rekart-oms",
     title: "Rekart OMS",
     category: "Operations · Software",
+    vertical: "Retail & E-commerce",
+    kind: "production",
     description: "Order management for walk-in, field, and workshop sales.",
     outcome: "Production at Rekart",
     image: "/projects/rekart-oms.png",
@@ -155,39 +165,73 @@ export const projects: Project[] = [
     region: "UAE",
   },
   {
-    slug: "rekart-inventory",
-    title: "Rekart Inventory",
-    category: "Inventory · Software",
-    description: "Stock tracking, alerts, and warehouse reporting.",
-    outcome: "89+ SKUs managed live",
-    image: "/projects/rekart-inventory.png",
+    slug: "leo-india",
+    title: "Leo India",
+    category: "Demo · Creative Agency",
+    vertical: "Agency & Brand",
+    description: "Bold creative agency site — mission, work showcase, accolades, and press. Premium motion-led UI.",
+    outcome: "UI/UX demo template",
+    liveUrl: "https://leo-website-kohl.vercel.app",
     featured: true,
+    kind: "demo",
+    image: "/projects/leo-india.png",
     year: "2025",
-    seoTitle: "Rekart Inventory Case Study — Stock Management Software",
+    seoTitle: "Leo India Demo — Creative Agency Website Template",
     seoDescription:
-      "Case study: Rekart Inventory — inventory management software with stock tracking, alerts, CSV import/export, and warehouse reporting for 89+ SKUs.",
+      "UI/UX demo: Leo India creative agency website template with work showcase, accolades timeline, and editorial press section.",
     challenge:
-      "Rekart needed full visibility over stock levels across warehouses — tracking 89+ SKUs, flagging low and out-of-stock items, importing/exporting catalog data, and giving ops teams a dashboard they could rely on every day.",
+      "Showcase what's possible for a world-class creative agency — a site that feels editorial, premium, and award-winning without looking like a generic template.",
     solution:
-      "Developed an inventory dashboard with catalog overview, stock status indicators, category and brand filters, CSV import/export, and real-time stock value reporting per warehouse.",
+      "Built a demo agency experience inspired by top-tier creative networks — bold typography, work carousels, accolades grid, news section, and smooth scroll-driven layout.",
     results: [
-      "89+ SKUs tracked across warehouses",
-      "Out-of-stock and low-stock alerts at a glance",
-      "CSV import and export for catalog management",
-      "Stock value reporting in AED",
+      "Full agency site structure — mission, work, people, accolades, news",
+      "Editorial typography and premium dark/light contrast",
+      "Demo live at leo-website-kohl.vercel.app",
+      "Template adaptable for any creative or advertising agency",
     ],
-    deliverables: ["Inventory dashboard", "Stock alerts", "CSV tools", "Warehouse reporting"],
-    role: "Developer — full build",
-    region: "UAE",
+    deliverables: ["Agency homepage", "Work showcase", "Accolades section", "Contact flow"],
+    role: "Designer & developer — demo build",
+    region: "Demo",
+  },
+  {
+    slug: "gaurab-bhandari",
+    title: "Gaurab Bhandari",
+    category: "Demo · Film & Creative",
+    vertical: "Film & Photography",
+    description: "Filmmaker portfolio with hero video, services grid, reels, and print shop — cinematic and immersive.",
+    outcome: "UI/UX demo template",
+    liveUrl: "https://demo.gaurabbhandari.com",
+    featured: true,
+    kind: "demo",
+    image: "/projects/gaurab-bhandari.png",
+    year: "2025",
+    seoTitle: "Gaurab Bhandari Demo — Filmmaker Portfolio Template",
+    seoDescription:
+      "UI/UX demo: filmmaker and visual artist portfolio with video hero, services, gallery, and cinematic layout at demo.gaurabbhandari.com.",
+    challenge:
+      "Demonstrate a portfolio template for filmmakers, drone operators, and visual artists — immersive, cinematic, and built to convert inquiries into bookings.",
+    solution:
+      "Designed a demo with full-screen video hero, service cards, featured reels grid, print shop teaser, and a warm creative aesthetic suited to Nepal/international creatives.",
+    results: [
+      "Cinematic video-first homepage",
+      "Services, gallery, reels, and shop sections",
+      "Demo live at demo.gaurabbhandari.com",
+      "Template for photographers, filmmakers, and visual artists",
+    ],
+    deliverables: ["Portfolio site", "Video hero", "Services grid", "Reels showcase"],
+    role: "Designer & developer — demo build",
+    region: "Demo",
   },
   {
     slug: "celeson",
     title: "Celeson Enterprise",
     category: "Corporate · Web",
+    vertical: "Corporate & Logistics",
     description: "Multi-region site for a 33+ year logistics company.",
     outcome: "Live corporate presence",
     liveUrl: "https://celeson-website.vercel.app",
     featured: true,
+    kind: "production",
     image: "/projects/celeson.png",
     year: "2025",
     seoTitle: "Celeson Enterprise Case Study — Corporate Website",
@@ -211,10 +255,12 @@ export const projects: Project[] = [
     slug: "ganesh",
     title: "Ganesh Khatri",
     category: "Portfolio · Web",
+    vertical: "Film & Creative",
     description: "Cinematographer portfolio built to win Dubai clients.",
     outcome: "Live at vibewithgannu.vercel.app",
     liveUrl: "https://vibewithgannu.vercel.app",
     featured: true,
+    kind: "production",
     image: "/projects/ganesh.png",
     year: "2025",
     seoTitle: "Ganesh Khatri Case Study — Cinematographer Portfolio",
@@ -238,10 +284,12 @@ export const projects: Project[] = [
     slug: "winklmayr-dashboard",
     title: "Winklmayr Dashboard",
     category: "Analytics",
+    vertical: "SaaS & Dashboards",
     description: "Sales performance dashboard with revenue reporting.",
     outcome: "Live dashboard",
     liveUrl: "https://winklmayrsalesdashboard.vercel.app",
     featured: false,
+    kind: "production",
     image: "/projects/dashboard.png",
     year: "2025",
     seoTitle: "Winklmayr Dashboard Case Study — Sales Analytics",
@@ -266,11 +314,14 @@ export function getProject(slug: string): Project | undefined {
   return projects.find((p) => p.slug === slug);
 }
 
+export const productionProjects = projects.filter((p) => p.kind === "production");
+export const demoProjects = projects.filter((p) => p.kind === "demo");
+
 export const proofStats = [
   { num: "01", title: "10+ products", body: "Websites, SaaS platforms, and business software shipped to production." },
-  { num: "02", title: "Canada & UAE", body: "Clients across North America and the Middle East — remote worldwide." },
+  { num: "02", title: "Worldwide", body: "Clients across North America, the Middle East, Europe, and beyond — fully remote." },
   { num: "03", title: "End to end", body: "One developer from idea to launch. No handoff, no agency overhead." },
-  { num: "04", title: "Live products", body: "CELPIPACE, Rekart, Scalify — real users, real revenue, every day." },
+  { num: "04", title: "Live products", body: "CELPIPACE, Rekart, Scalify — plus UI demos across agency, film, and SaaS verticals." },
 ];
 
 export const services = [
@@ -314,14 +365,16 @@ export const comparison = {
 
 export const testimonials = [
   {
-    quote: "Clint took our idea and turned it into a real, live product. Professional, responsive, and genuinely cares about the outcome.",
-    name: "Business owner",
-    role: "Education platform",
+    quote:
+      "Clint built my portfolio exactly how I wanted — cinematic, polished, and built to win clients in Dubai. Professional from start to launch.",
+    name: "Ganesh Khatri",
+    role: "Cinematographer · vibewithgannu.vercel.app",
   },
   {
-    quote: "Our operations tools are still running smoothly in production. He thinks about the business, not just the build.",
-    name: "Operations lead",
-    role: "E-commerce · UAE",
+    quote:
+      "Our corporate site reflects 33+ years of expertise across India and the GCC. Clint understood our markets and delivered a presence we are proud of.",
+    name: "Arun Alphones",
+    role: "Celeson Enterprise",
   },
 ];
 
@@ -335,8 +388,8 @@ export const faqs = [
     a: "Message me on WhatsApp with your idea. I'll reply personally within 24 hours with next steps.",
   },
   {
-    q: "Do you work with clients outside Canada?",
-    a: "Yes — I work with clients in the UAE, US, UK, and worldwide. Most communication happens over WhatsApp and email.",
+    q: "Do you work with clients outside your timezone?",
+    a: "Yes — I work with clients worldwide. Most communication happens over WhatsApp and email, async-friendly across time zones.",
   },
   {
     q: "What types of projects do you take?",
@@ -346,4 +399,8 @@ export const faqs = [
 
 export const whatsappLink = `https://wa.me/${siteConfig.whatsapp.replace(/\D/g, "")}?text=${encodeURIComponent("Hi Clint, I'd like to discuss a project with you.")}`;
 
-export const workMarquee = projects.filter((p) => p.featured).map((p) => ({ title: p.title, category: p.category }));
+export const emailLink = `mailto:${siteConfig.email}?subject=${encodeURIComponent("Project inquiry")}&body=${encodeURIComponent("Hi Clint,\n\nI'd like to discuss a project with you.\n\n")}`;
+
+export const workMarquee = projects
+  .filter((p) => p.featured)
+  .map((p) => ({ title: p.title, category: p.vertical }));

@@ -1,5 +1,5 @@
 import Link from "next/link";
-import { siteConfig, whatsappLink } from "@/data/portfolio";
+import { emailLink, siteConfig, whatsappLink } from "@/data/portfolio";
 
 export function Footer() {
   return (
@@ -14,6 +14,9 @@ export function Footer() {
           <Link href="/#contact" className="hover:text-foreground">Contact</Link>
           <Link href={whatsappLink} target="_blank" rel="noopener noreferrer" className="hover:text-foreground">
             WhatsApp
+          </Link>
+          <Link href={emailLink} className="hover:text-foreground">
+            Email
           </Link>
         </nav>
         <p className="text-xs text-muted">© {new Date().getFullYear()}</p>
