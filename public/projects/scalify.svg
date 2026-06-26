@@ -1,0 +1,11 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="800" height="500" viewBox="0 0 800 500" fill="none">
+  <rect width="800" height="500" fill="#1a1a2e"/>
+  <rect x="40" y="40" width="720" height="420" rx="16" fill="#0f0f1a" stroke="#7C3AED" stroke-width="1" stroke-opacity="0.3"/>
+  <text x="400" y="200" text-anchor="middle" fill="#fff" font-family="system-ui" font-size="56" font-weight="800" letter-spacing="-2">SCALIFY</text>
+  <text x="400" y="240" text-anchor="middle" fill="#A78BFA" font-family="system-ui" font-size="16" letter-spacing="4">scalify.ae</text>
+  <rect x="300" y="280" width="200" height="48" rx="24" fill="#7C3AED"/>
+  <text x="400" y="310" text-anchor="middle" fill="#fff" font-family="system-ui" font-size="14" font-weight="600">Get Started</text>
+  <rect x="120" y="360" width="160" height="80" rx="8" fill="#7C3AED" fill-opacity="0.15"/>
+  <rect x="320" y="360" width="160" height="80" rx="8" fill="#7C3AED" fill-opacity="0.15"/>
+  <rect x="520" y="360" width="160" height="80" rx="8" fill="#7C3AED" fill-opacity="0.15"/>
+</svg>

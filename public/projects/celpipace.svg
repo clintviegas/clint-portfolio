@@ -1,0 +1,21 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="800" height="500" viewBox="0 0 800 500" fill="none">
+  <rect width="800" height="500" fill="#EFF6FF"/>
+  <rect x="40" y="40" width="720" height="420" rx="16" fill="#fff" stroke="#DBEAFE" stroke-width="2"/>
+  <rect x="40" y="40" width="720" height="48" rx="16" fill="#2563EB"/>
+  <rect x="40" y="72" width="720" height="16" fill="#2563EB"/>
+  <circle cx="68" cy="64" r="6" fill="#fff" fill-opacity="0.5"/>
+  <circle cx="88" cy="64" r="6" fill="#fff" fill-opacity="0.5"/>
+  <circle cx="108" cy="64" r="6" fill="#fff" fill-opacity="0.5"/>
+  <text x="400" y="68" text-anchor="middle" fill="#fff" font-family="system-ui" font-size="14" font-weight="600">celpipace.ca</text>
+  <rect x="80" y="120" width="300" height="24" rx="6" fill="#2563EB" fill-opacity="0.15"/>
+  <rect x="80" y="160" width="640" height="12" rx="4" fill="#E2E8F0"/>
+  <rect x="80" y="184" width="560" height="12" rx="4" fill="#E2E8F0"/>
+  <rect x="80" y="208" width="480" height="12" rx="4" fill="#E2E8F0"/>
+  <rect x="80" y="260" width="200" height="140" rx="12" fill="#2563EB" fill-opacity="0.1"/>
+  <rect x="300" y="260" width="200" height="140" rx="12" fill="#2563EB" fill-opacity="0.1"/>
+  <rect x="520" y="260" width="200" height="140" rx="12" fill="#2563EB" fill-opacity="0.1"/>
+  <rect x="100" y="290" width="80" height="8" rx="4" fill="#2563EB" fill-opacity="0.4"/>
+  <rect x="100" y="310" width="120" height="6" rx="3" fill="#CBD5E1"/>
+  <rect x="320" y="290" width="80" height="8" rx="4" fill="#2563EB" fill-opacity="0.4"/>
+  <rect x="540" y="290" width="80" height="8" rx="4" fill="#2563EB" fill-opacity="0.4"/>
+</svg>
