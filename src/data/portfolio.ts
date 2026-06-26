@@ -137,34 +137,6 @@ export const projects: Project[] = [
     region: "UAE",
   },
   {
-    slug: "rekart-oms",
-    title: "Rekart OMS",
-    category: "Operations · Software",
-    vertical: "Retail & E-commerce",
-    kind: "production",
-    description: "Order management for walk-in, field, and workshop sales.",
-    outcome: "Production at Rekart",
-    image: "/projects/rekart-oms.png",
-    featured: true,
-    year: "2025",
-    seoTitle: "Rekart OMS Case Study — Order Management System",
-    seoDescription:
-      "Case study: Rekart OMS — an order management system for walk-in sales, field orders, and workshop desks with customer capture and product search.",
-    challenge:
-      "Rekart's sales team needed a fast way to punch orders from walk-in customers, field sales, and workshop desks — capturing customer details, searching products by SKU, and confirming orders without switching between tools.",
-    solution:
-      "Built a focused order management interface with customer forms, product search across the full catalog, quantity and pricing controls, order preview, and a streamlined punch-order workflow.",
-    results: [
-      "Unified order flow for walk-in, field, and workshop sales",
-      "Product search by name or SKU across 89+ items",
-      "Customer capture with UAE market and currency support",
-      "Production tool used daily by the Rekart team",
-    ],
-    deliverables: ["Order management UI", "Product search", "Customer forms", "Order preview"],
-    role: "Developer — full build",
-    region: "UAE",
-  },
-  {
     slug: "leo-india",
     title: "Leo India",
     category: "Demo · Creative Agency",
@@ -173,6 +145,7 @@ export const projects: Project[] = [
     outcome: "UI/UX demo template",
     liveUrl: "https://leo-website-kohl.vercel.app",
     featured: true,
+    highlight: true,
     kind: "demo",
     image: "/projects/leo-india.png",
     year: "2025",
@@ -202,6 +175,7 @@ export const projects: Project[] = [
     outcome: "UI/UX demo template",
     liveUrl: "https://demo.gaurabbhandari.com",
     featured: true,
+    highlight: true,
     kind: "demo",
     image: "/projects/gaurab-bhandari.png",
     year: "2025",
@@ -221,6 +195,34 @@ export const projects: Project[] = [
     deliverables: ["Portfolio site", "Video hero", "Services grid", "Reels showcase"],
     role: "Designer & developer — demo build",
     region: "Demo",
+  },
+  {
+    slug: "rekart-oms",
+    title: "Rekart OMS",
+    category: "Operations · Software",
+    vertical: "Retail & E-commerce",
+    kind: "production",
+    description: "Order management for walk-in, field, and workshop sales.",
+    outcome: "Production at Rekart",
+    image: "/projects/rekart-oms.png",
+    featured: true,
+    year: "2025",
+    seoTitle: "Rekart OMS Case Study — Order Management System",
+    seoDescription:
+      "Case study: Rekart OMS — an order management system for walk-in sales, field orders, and workshop desks with customer capture and product search.",
+    challenge:
+      "Rekart's sales team needed a fast way to punch orders from walk-in customers, field sales, and workshop desks — capturing customer details, searching products by SKU, and confirming orders without switching between tools.",
+    solution:
+      "Built a focused order management interface with customer forms, product search across the full catalog, quantity and pricing controls, order preview, and a streamlined punch-order workflow.",
+    results: [
+      "Unified order flow for walk-in, field, and workshop sales",
+      "Product search by name or SKU across 89+ items",
+      "Customer capture with UAE market and currency support",
+      "Production tool used daily by the Rekart team",
+    ],
+    deliverables: ["Order management UI", "Product search", "Customer forms", "Order preview"],
+    role: "Developer — full build",
+    region: "UAE",
   },
   {
     slug: "celeson",
@@ -321,7 +323,7 @@ export const proofStats = [
   { num: "01", title: "10+ products", body: "Websites, SaaS platforms, and business software shipped to production." },
   { num: "02", title: "Worldwide", body: "Clients across North America, the Middle East, Europe, and beyond — fully remote." },
   { num: "03", title: "End to end", body: "One developer from idea to launch. No handoff, no agency overhead." },
-  { num: "04", title: "Live products", body: "CELPIPACE, Rekart, Scalify — plus UI demos across agency, film, and SaaS verticals." },
+  { num: "04", title: "Live products", body: "CELPIPACE, Rekart, Scalify — plus Leo India and Gaurab Bhandari UI demos across agency and film." },
 ];
 
 export const services = [
@@ -403,4 +405,5 @@ export const emailLink = `mailto:${siteConfig.email}?subject=${encodeURIComponen
 
 export const workMarquee = projects
   .filter((p) => p.featured)
+  .sort((a, b) => Number(Boolean(b.highlight)) - Number(Boolean(a.highlight)))
   .map((p) => ({ title: p.title, category: p.vertical }));
