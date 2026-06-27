@@ -9,9 +9,9 @@ export function Hero() {
     <section className="relative overflow-hidden pt-28 md:pt-36">
       <div className="wrap">
         <Reveal>
-          <div className="mb-8 inline-flex items-center gap-2 rounded-full border border-border px-4 py-1.5">
-            <span className="h-1.5 w-1.5 rounded-full bg-emerald-400" />
-            <span className="text-xs text-muted">{siteConfig.availability} · {siteConfig.responseTime}</span>
+          <div className="badge-pill mb-8">
+            <span className="h-1.5 w-1.5 rounded-full bg-success" />
+            <span className="text-xs text-muted">{siteConfig.heroBadge}</span>
           </div>
         </Reveal>
 
@@ -25,9 +25,8 @@ export function Hero() {
               </h1>
             </Reveal>
             <Reveal delay={0.1}>
-              <p className="mt-6 max-w-lg text-base leading-relaxed text-muted md:text-lg">
-                I&apos;m {siteConfig.name} — freelance developer for businesses worldwide.
-                One partner from idea to launch.
+              <p className="mt-6 max-w-xl text-base leading-relaxed text-muted md:text-lg">
+                {siteConfig.heroIntro}
               </p>
             </Reveal>
             <Reveal delay={0.15}>
@@ -42,7 +41,7 @@ export function Hero() {
               </div>
             </Reveal>
             <Reveal delay={0.2}>
-              <p className="mt-8 text-xs text-muted">{siteConfig.location}</p>
+              <p className="mt-8 text-xs text-muted">Based in Vancouver · Available worldwide</p>
             </Reveal>
           </div>
 

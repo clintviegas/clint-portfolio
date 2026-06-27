@@ -7,7 +7,7 @@ export function Contact() {
     <section id="contact" className="section scroll-mt-24">
       <div className="wrap">
         <Reveal>
-          <div className="rounded-3xl border border-border bg-background-elevated px-8 py-14 text-center md:px-16 md:py-20">
+          <div className="panel px-8 py-14 text-center md:px-16 md:py-20">
             <p className="eyebrow mb-4">Still curious?</p>
             <h2 className="font-display text-3xl md:text-4xl lg:text-5xl">Ask me directly.</h2>
             <p className="mx-auto mt-4 max-w-md text-muted">

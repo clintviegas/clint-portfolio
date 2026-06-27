@@ -1,4 +1,5 @@
 import type { Metadata, Viewport } from "next";
+import Script from "next/script";
 import { Syne, Inter } from "next/font/google";
 import "./globals.css";
 import { siteConfig } from "@/data/portfolio";
@@ -38,14 +39,22 @@ export const metadata: Metadata = {
 };
 
 export const viewport: Viewport = {
-  themeColor: "#09090B",
-  colorScheme: "dark",
+  themeColor: [
+    { media: "(prefers-color-scheme: light)", color: "#F4F4F5" },
+    { media: "(prefers-color-scheme: dark)", color: "#09090B" },
+  ],
+  colorScheme: "light dark",
 };
+
+const themeScript = `(function(){try{var t=localStorage.getItem("theme");document.documentElement.setAttribute("data-theme",t==="light"||t==="dark"?t:"dark");}catch(e){document.documentElement.setAttribute("data-theme","dark");}})();`;
 
 export default function RootLayout({ children }: { children: React.ReactNode }) {
   return (
-    <html lang="en" className={`${display.variable} ${body.variable}`}>
-      <body>
+    <html lang="en" className={`${display.variable} ${body.variable}`} data-theme="dark" suppressHydrationWarning>
+      <body suppressHydrationWarning>
+        <Script id="theme-init" strategy="beforeInteractive">
+          {themeScript}
+        </Script>
         {children}
         <WhatsAppFab />
       </body>

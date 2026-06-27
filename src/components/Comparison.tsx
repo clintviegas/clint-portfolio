@@ -3,7 +3,7 @@ import { Reveal } from "./Reveal";
 
 export function Comparison() {
   return (
-    <section className="section border-t border-border bg-background-elevated">
+    <section className="section border-t border-border bg-background">
       <div className="wrap">
         <Reveal>
           <p className="eyebrow mb-3">The honest comparison</p>
@@ -22,7 +22,7 @@ export function Comparison() {
                     className={`pb-4 pr-4 font-medium ${i === 1 ? "text-foreground" : "text-muted"}`}
                   >
                     {i === 1 && (
-                      <span className="mb-1 block text-[10px] uppercase tracking-wider text-emerald-400">
+                      <span className="mb-1 block text-[10px] uppercase tracking-wider text-success">
                         Recommended
                       </span>
                     )}

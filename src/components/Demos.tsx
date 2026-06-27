@@ -6,7 +6,7 @@ import { Reveal } from "./Reveal";
 
 export function Demos() {
   return (
-    <section id="demos" className="section scroll-mt-24 border-t border-border bg-background-elevated">
+    <section id="demos" className="section scroll-mt-24 border-t border-border bg-background">
       <div className="wrap">
         <Reveal>
           <div className="flex flex-col items-start justify-between gap-4 sm:flex-row sm:items-end">

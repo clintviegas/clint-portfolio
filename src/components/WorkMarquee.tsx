@@ -10,7 +10,7 @@ export function WorkMarquee() {
           <div key={`${item.title}-${i}`} className="flex shrink-0 items-center gap-4">
             <span className="font-display text-lg font-semibold md:text-xl">{item.title}</span>
             <span className="text-sm text-muted">{item.category}</span>
-            <span className="text-border-strong">·</span>
+            <span className="text-muted/40">·</span>
           </div>
         ))}
       </div>

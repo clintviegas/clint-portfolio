@@ -5,7 +5,7 @@ export const siteConfig = {
   whatsapp: "+17788699298",
   whatsappDisplay: "+1 (778) 869-9298",
   description:
-    "Freelance developer building websites, web apps, and SaaS for businesses worldwide.",
+    "Freelance developer trusted by founders and brands worldwide. Websites, web apps, and SaaS — designed with precision, crafted with care.",
   tagline: "Websites, apps & software — built to grow your business.",
   keywords: [
     "Clint Viegas",
@@ -17,8 +17,9 @@ export const siteConfig = {
     "freelance software developer",
   ],
   availability: "Open for new projects",
-  location: "Based in Vancouver · Available worldwide",
-  responseTime: "Replies within 24 hours",
+  heroBadge: "Open for new projects · Let's build something.",
+  heroIntro:
+    "Freelance developer trusted by founders and brands worldwide. I take your idea and build something people love to use, designed with precision, crafted with care, and made to feel like it was always meant to exist.",
 };
 
 export type Project = {
@@ -320,10 +321,26 @@ export const productionProjects = projects.filter((p) => p.kind === "production"
 export const demoProjects = projects.filter((p) => p.kind === "demo");
 
 export const proofStats = [
-  { num: "01", title: "10+ products", body: "Websites, SaaS platforms, and business software shipped to production." },
-  { num: "02", title: "Worldwide", body: "Clients across North America, the Middle East, Europe, and beyond — fully remote." },
-  { num: "03", title: "End to end", body: "One developer from idea to launch. No handoff, no agency overhead." },
-  { num: "04", title: "Live products", body: "CELPIPACE, Rekart, Scalify, Gaurab Bhandari — plus Leo India UI demo for agency verticals." },
+  {
+    num: "01",
+    title: "10+ products",
+    body: "Websites, SaaS platforms, and business software. Built properly, shipped on time, used by real people.",
+  },
+  {
+    num: "02",
+    title: "Worldwide",
+    body: "Clients across North America, the Middle East, Europe, and beyond. Fully remote, zero excuses.",
+  },
+  {
+    num: "03",
+    title: "End to end",
+    body: "One developer. Idea to launch. No handoffs, no agency markup, no waiting on someone else.",
+  },
+  {
+    num: "04",
+    title: "Live products",
+    body: "Real clients, real launches. CELPIPACE, Rekart, Scalify, Leo India, Gaurab Bhandari and more. Every product live and in the wild.",
+  },
 ];
 
 export const services = [

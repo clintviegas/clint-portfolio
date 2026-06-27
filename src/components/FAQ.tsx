@@ -9,7 +9,7 @@ export function FAQ() {
   const [open, setOpen] = useState<number | null>(0);
 
   return (
-    <section className="section border-t border-border bg-background-elevated">
+    <section className="section border-t border-border bg-background">
       <div className="wrap">
         <Reveal>
           <p className="eyebrow mb-3">FAQ</p>
@@ -23,7 +23,7 @@ export function FAQ() {
                 <button
                   type="button"
                   onClick={() => setOpen(open === i ? null : i)}
-                  className="flex w-full items-center justify-between gap-4 py-5 text-left"
+                  className="flex w-full items-center justify-between gap-4 py-5 text-left text-foreground"
                   aria-expanded={open === i}
                 >
                   <span className="text-sm font-medium md:text-base">
