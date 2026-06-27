@@ -60,8 +60,8 @@ export default function WorkIndexPage() {
               Fancy templates across verticals
             </h2>
             <p className="mt-4 max-w-xl text-muted">
-              Concept builds showcasing polished design across agency, film, and creative
-              industries — adaptable starting points for your brand.
+              A concept build showcasing polished agency design — adaptable as a starting point for
+              creative and advertising brands.
             </p>
           </div>
 

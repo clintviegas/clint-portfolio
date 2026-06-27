@@ -169,32 +169,32 @@ export const projects: Project[] = [
   {
     slug: "gaurab-bhandari",
     title: "Gaurab Bhandari",
-    category: "Demo · Film & Creative",
+    category: "Portfolio · Web",
     vertical: "Film & Photography",
     description: "Filmmaker portfolio with hero video, services grid, reels, and print shop — cinematic and immersive.",
-    outcome: "UI/UX demo template",
+    outcome: "Live at demo.gaurabbhandari.com",
     liveUrl: "https://demo.gaurabbhandari.com",
     featured: true,
     highlight: true,
-    kind: "demo",
+    kind: "production",
     image: "/projects/gaurab-bhandari.png",
     year: "2025",
-    seoTitle: "Gaurab Bhandari Demo — Filmmaker Portfolio Template",
+    seoTitle: "Gaurab Bhandari Case Study — Filmmaker Portfolio",
     seoDescription:
-      "UI/UX demo: filmmaker and visual artist portfolio with video hero, services, gallery, and cinematic layout at demo.gaurabbhandari.com.",
+      "Case study: filmmaker and visual artist portfolio for Gaurab Bhandari — video hero, services, gallery, and cinematic layout at demo.gaurabbhandari.com.",
     challenge:
-      "Demonstrate a portfolio template for filmmakers, drone operators, and visual artists — immersive, cinematic, and built to convert inquiries into bookings.",
+      "Gaurab needed a portfolio that feels as cinematic as his work — immersive, professional, and built to convert inquiries into bookings for drone, documentary, and commercial projects.",
     solution:
-      "Designed a demo with full-screen video hero, service cards, featured reels grid, print shop teaser, and a warm creative aesthetic suited to Nepal/international creatives.",
+      "Designed and built a live portfolio with full-screen video hero, service cards, featured reels grid, print shop section, and a warm creative aesthetic for international clients.",
     results: [
       "Cinematic video-first homepage",
-      "Services, gallery, reels, and shop sections",
-      "Demo live at demo.gaurabbhandari.com",
-      "Template for photographers, filmmakers, and visual artists",
+      "Services, gallery, reels, and shop sections live",
+      "Portfolio at demo.gaurabbhandari.com",
+      "Built to convert visitors into booking inquiries",
     ],
     deliverables: ["Portfolio site", "Video hero", "Services grid", "Reels showcase"],
-    role: "Designer & developer — demo build",
-    region: "Demo",
+    role: "Designer & developer",
+    region: "Nepal · Worldwide",
   },
   {
     slug: "rekart-oms",
@@ -323,7 +323,7 @@ export const proofStats = [
   { num: "01", title: "10+ products", body: "Websites, SaaS platforms, and business software shipped to production." },
   { num: "02", title: "Worldwide", body: "Clients across North America, the Middle East, Europe, and beyond — fully remote." },
   { num: "03", title: "End to end", body: "One developer from idea to launch. No handoff, no agency overhead." },
-  { num: "04", title: "Live products", body: "CELPIPACE, Rekart, Scalify — plus Leo India and Gaurab Bhandari UI demos across agency and film." },
+  { num: "04", title: "Live products", body: "CELPIPACE, Rekart, Scalify, Gaurab Bhandari — plus Leo India UI demo for agency verticals." },
 ];
 
 export const services = [

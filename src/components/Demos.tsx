@@ -16,8 +16,8 @@ export function Demos() {
                 Fancy templates across verticals
               </h2>
               <p className="mt-4 max-w-xl text-sm text-muted md:text-base">
-                Concept builds and demo sites — agency, film, SaaS, and more. Each one shows what
-                a polished site in that space can look like.
+                A concept build showing what a polished creative agency site can look like — bold
+                typography, work showcase, and premium motion-led UI.
               </p>
             </div>
             <Link

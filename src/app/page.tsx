@@ -21,8 +21,8 @@ export default function HomePage() {
         <Hero />
         <WorkMarquee />
         <Proof />
-        <Demos />
         <Work />
+        <Demos />
         <Services />
         <FounderNote />
         <Process />
