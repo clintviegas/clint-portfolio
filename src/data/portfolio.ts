@@ -4,22 +4,38 @@ export const siteConfig = {
   email: "clint.viegas@gmail.com",
   whatsapp: "+17788699298",
   whatsappDisplay: "+1 (778) 869-9298",
+  // TODO: Add your LinkedIn profile URL
+  linkedinUrl: "",
+  // TODO: Add your GitHub profile URL
+  githubUrl: "",
+  // TODO: Add your Calendly or scheduling URL (falls back to WhatsApp until set)
+  calendlyUrl: "",
   description:
-    "Freelance developer trusted by founders and brands worldwide. Websites, web apps, and SaaS — designed with precision, crafted with care.",
-  tagline: "Websites, apps & software — built to grow your business.",
+    "AI full-stack developer building websites, SaaS products, dashboards, automations, and modern business software.",
+  tagline: "AI-powered websites, SaaS & business software — built to grow.",
   keywords: [
     "Clint Viegas",
+    "AI full-stack developer",
+    "AI developer for hire",
+    "SaaS developer",
     "freelance web developer Vancouver",
     "hire web developer Canada",
-    "SaaS developer for hire",
     "website developer UAE",
     "custom web app development",
-    "freelance software developer",
+    "automation developer",
+    "Next.js developer",
   ],
-  availability: "Open for new projects",
-  heroBadge: "Open for new projects · Let's build something.",
-  heroIntro:
-    "Freelance developer trusted by founders and brands worldwide. I take your idea and build something people love to use, designed with precision, crafted with care, and made to feel like it was always meant to exist.",
+  availability: "Available for freelance & remote roles",
+  heroBadge: "Available for freelance & remote roles",
+  heroHeadline: "AI Full-Stack Developer building software that grows businesses.",
+  heroSubheadline:
+    "I build AI-powered websites, SaaS products, dashboards, and automations for startups, agencies, and growing businesses.",
+};
+
+export type ProjectMetric = {
+  label: string;
+  value: string;
+  isPlaceholder?: boolean;
 };
 
 export type Project = {
@@ -41,6 +57,9 @@ export type Project = {
   solution: string;
   results: string[];
   deliverables: string[];
+  techStack: string[];
+  impact: string;
+  metrics: ProjectMetric[];
   role: string;
   region: string;
 };
@@ -74,6 +93,14 @@ export const projects: Project[] = [
       "Production platform at celpipace.ca",
     ],
     deliverables: ["SaaS platform", "Payment system", "User auth", "AI scoring", "Admin dashboard", "SEO pages"],
+    techStack: ["Next.js", "React", "TypeScript", "Stripe", "OpenAI", "Supabase", "Vercel"],
+    impact: "Turned a content idea into a subscription SaaS with AI scoring — students practice, pay, and track progress in one product.",
+    metrics: [
+      { label: "Practice content", value: "1,190+ questions live" },
+      { label: "Mock exams", value: "8 full exams with score reports" },
+      // TODO: replace with real metric
+      { label: "Active subscribers", value: "Used by X users", isPlaceholder: true },
+    ],
     role: "Solo developer — product, design, build, and launch",
     region: "Canada",
   },
@@ -104,6 +131,15 @@ export const projects: Project[] = [
       "Integrated with Rekart's broader ops stack",
     ],
     deliverables: ["E-commerce website", "Brand storefront", "Product catalog", "Mobile UX"],
+    techStack: ["Next.js", "React", "TypeScript", "Tailwind CSS", "Vercel"],
+    impact: "Gave Rekart a professional UAE storefront that supports retail growth and brand trust online.",
+    metrics: [
+      { label: "Market", value: "Live at rekart.ae" },
+      // TODO: replace with real metric
+      { label: "Lead conversion", value: "Improved lead conversion by X%", isPlaceholder: true },
+      // TODO: replace with real metric
+      { label: "Performance", value: "Improved page speed by X%", isPlaceholder: true },
+    ],
     role: "Developer — design and build",
     region: "UAE",
   },
@@ -134,6 +170,15 @@ export const projects: Project[] = [
       "Mobile-first, fast-loading design",
     ],
     deliverables: ["Brand website", "Career platform", "Application flow", "Responsive design"],
+    techStack: ["Next.js", "React", "TypeScript", "Tailwind CSS", "Framer Motion", "Vercel"],
+    impact: "Delivered a bold agency site that converts visitors into internship applicants and brand inquiries.",
+    metrics: [
+      { label: "Launch", value: "Live at scalify.ae" },
+      // TODO: replace with real metric
+      { label: "Applications", value: "Generated X leads", isPlaceholder: true },
+      // TODO: replace with real metric
+      { label: "Timeline", value: "Launched MVP in X weeks", isPlaceholder: true },
+    ],
     role: "Designer & developer — end to end",
     region: "UAE",
   },
@@ -164,6 +209,13 @@ export const projects: Project[] = [
       "Template adaptable for any creative or advertising agency",
     ],
     deliverables: ["Agency homepage", "Work showcase", "Accolades section", "Contact flow"],
+    techStack: ["Next.js", "React", "TypeScript", "Tailwind CSS", "Framer Motion", "Vercel"],
+    impact: "Demonstrates premium agency UX patterns — adaptable template for creative and advertising brands.",
+    metrics: [
+      { label: "Demo", value: "Full agency site structure" },
+      // TODO: replace with real metric when sold to a client
+      { label: "Timeline", value: "Launched MVP in X weeks", isPlaceholder: true },
+    ],
     role: "Designer & developer — demo build",
     region: "Demo",
   },
@@ -194,6 +246,13 @@ export const projects: Project[] = [
       "Built to convert visitors into booking inquiries",
     ],
     deliverables: ["Portfolio site", "Video hero", "Services grid", "Reels showcase"],
+    techStack: ["Next.js", "React", "TypeScript", "Tailwind CSS", "Vercel"],
+    impact: "Gave a filmmaker a cinematic portfolio built to convert visitors into booking inquiries worldwide.",
+    metrics: [
+      { label: "Launch", value: "Live at demo.gaurabbhandari.com" },
+      // TODO: replace with real metric
+      { label: "Inquiries", value: "Improved lead conversion by X%", isPlaceholder: true },
+    ],
     role: "Designer & developer",
     region: "Nepal · Worldwide",
   },
@@ -222,6 +281,14 @@ export const projects: Project[] = [
       "Production tool used daily by the Rekart team",
     ],
     deliverables: ["Order management UI", "Product search", "Customer forms", "Order preview"],
+    techStack: ["React", "TypeScript", "Tailwind CSS", "Supabase"],
+    impact: "Unified order entry for Rekart's sales team — one tool for walk-in, field, and workshop desks.",
+    metrics: [
+      { label: "Catalog", value: "89+ products searchable by SKU" },
+      { label: "Usage", value: "Used daily by Rekart team" },
+      // TODO: replace with real metric
+      { label: "Efficiency", value: "Reduced manual work by X%", isPlaceholder: true },
+    ],
     role: "Developer — full build",
     region: "UAE",
   },
@@ -251,6 +318,13 @@ export const projects: Project[] = [
       "Live at celeson-website.vercel.app",
     ],
     deliverables: ["Corporate website", "Multi-region routing", "Case study pages", "SEO structure"],
+    techStack: ["Next.js", "React", "TypeScript", "Tailwind CSS", "Vercel"],
+    impact: "Gave a 33+ year logistics company a credible multi-region web presence across India and the GCC.",
+    metrics: [
+      { label: "Markets", value: "India & GCC multi-region site" },
+      // TODO: replace with real metric
+      { label: "Inquiries", value: "Generated X leads", isPlaceholder: true },
+    ],
     role: "Developer — design and build",
     region: "India & GCC",
   },
@@ -280,6 +354,13 @@ export const projects: Project[] = [
       "Fast, polished user experience",
     ],
     deliverables: ["Portfolio website", "Showreel layout", "Personal branding", "Mobile design"],
+    techStack: ["Next.js", "React", "TypeScript", "Tailwind CSS", "Vercel"],
+    impact: "Helped a Dubai cinematographer stand out with a cinematic portfolio built to win client inquiries.",
+    metrics: [
+      { label: "Launch", value: "Live at vibewithgannu.vercel.app" },
+      // TODO: replace with real metric
+      { label: "Inquiries", value: "Improved lead conversion by X%", isPlaceholder: true },
+    ],
     role: "Designer & developer",
     region: "UAE",
   },
@@ -308,6 +389,15 @@ export const projects: Project[] = [
       "Live dashboard deployed on Vercel",
     ],
     deliverables: ["Analytics dashboard", "Data visualization", "Reporting views"],
+    techStack: ["React", "TypeScript", "Tailwind CSS", "Vercel"],
+    impact: "Replaced spreadsheet digging with a clear daily sales performance view for business owners.",
+    metrics: [
+      { label: "Deployment", value: "Live dashboard on Vercel" },
+      // TODO: replace with real metric
+      { label: "Team usage", value: "Used by X team members", isPlaceholder: true },
+      // TODO: replace with real metric
+      { label: "Efficiency", value: "Reduced manual work by X%", isPlaceholder: true },
+    ],
     role: "Developer",
     region: "International",
   },
@@ -364,11 +454,63 @@ export const services = [
   },
 ];
 
+export type StackCategory = "Framework" | "Backend" | "AI" | "DevTools" | "Infra";
+
+export const aiStack: { name: string; category: StackCategory }[] = [
+  { name: "Next.js", category: "Framework" },
+  { name: "React", category: "Framework" },
+  { name: "TypeScript", category: "Framework" },
+  { name: "Tailwind CSS", category: "Framework" },
+  { name: "Supabase", category: "Backend" },
+  { name: "Firebase", category: "Backend" },
+  { name: "Stripe", category: "Backend" },
+  { name: "OpenAI", category: "AI" },
+  { name: "Anthropic", category: "AI" },
+  { name: "Claude Code", category: "AI" },
+  { name: "Cursor", category: "DevTools" },
+  { name: "Codex", category: "DevTools" },
+  { name: "n8n", category: "DevTools" },
+  { name: "MCP", category: "DevTools" },
+  { name: "Vercel", category: "Infra" },
+  { name: "Cloudflare", category: "Infra" },
+];
+
+export const clientLogos: { name: string; slug?: string; logoSrc?: string }[] = [
+  { name: "CELPIPACE", slug: "celpipace" },
+  { name: "Rekart", slug: "rekart-ae" },
+  { name: "Scalify", slug: "scalify" },
+  { name: "Celeson", slug: "celeson" },
+  { name: "Leo India", slug: "leo-india" },
+  { name: "Gaurab Bhandari", slug: "gaurab-bhandari" },
+  // TODO: add logoSrc when client approves asset, e.g. logoSrc: "/logos/rekart.svg"
+];
+
 export const process = [
-  { step: "01", title: "Discover", body: "Quick call on WhatsApp — goals, audience, timeline, and budget." },
-  { step: "02", title: "Plan", body: "Clear scope and design direction before a line of code is written." },
-  { step: "03", title: "Build", body: "Regular previews. Your feedback at every stage. No surprises." },
-  { step: "04", title: "Launch", body: "Deployed, tested, and handed over. Available for ongoing work." },
+  {
+    step: "01",
+    title: "Discover",
+    body: "We align on goals, users, constraints, timeline, and success metrics — so the build solves the right problem.",
+  },
+  {
+    step: "02",
+    title: "Design",
+    body: "UX direction, architecture, and AI integration plan — clear scope before a line of code is written.",
+  },
+  {
+    step: "03",
+    title: "Build",
+    body: "Fast iteration with modern AI tooling. Regular previews and your feedback at every stage.",
+  },
+  {
+    step: "04",
+    title: "Launch",
+    body: "Deployed, tested, and handed over. Production-ready with documentation and clean handoff.",
+  },
+  {
+    step: "05",
+    title: "Iterate",
+    body: "Post-launch improvements, automation, and scale — so the product keeps growing with your business.",
+  },
 ];
 
 export const comparison = {
@@ -397,6 +539,8 @@ export const testimonials = [
   },
 ];
 
+export const featuredTestimonial = testimonials[1];
+
 export const faqs = [
   {
     q: "What makes you different from an agency?",
@@ -412,13 +556,17 @@ export const faqs = [
   },
   {
     q: "What types of projects do you take?",
-    a: "Websites, web apps, SaaS platforms, order/inventory systems, and marketing tools. If it runs in a browser, I can build it.",
+    a: "AI-powered websites, SaaS platforms, dashboards, automations, and business software. If it runs in a browser, I can build it.",
   },
 ];
 
 export const whatsappLink = `https://wa.me/${siteConfig.whatsapp.replace(/\D/g, "")}?text=${encodeURIComponent("Hi Clint, I'd like to discuss a project with you.")}`;
 
 export const emailLink = `mailto:${siteConfig.email}?subject=${encodeURIComponent("Project inquiry")}&body=${encodeURIComponent("Hi Clint,\n\nI'd like to discuss a project with you.\n\n")}`;
+
+/** Falls back to WhatsApp until calendlyUrl is set in siteConfig */
+export const scheduleLink =
+  siteConfig.calendlyUrl.trim() !== "" ? siteConfig.calendlyUrl : whatsappLink;
 
 export const workMarquee = projects
   .filter((p) => p.featured)

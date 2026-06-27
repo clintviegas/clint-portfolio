@@ -6,11 +6,11 @@ export function Process() {
     <section id="process" className="section scroll-mt-24 border-t border-border">
       <div className="wrap">
         <Reveal>
-          <p className="eyebrow mb-3">How it works</p>
-          <h2 className="font-display text-3xl md:text-4xl">From brief to live in weeks</h2>
+          <p className="eyebrow mb-3">How I work</p>
+          <h2 className="font-display text-3xl md:text-4xl">From idea to live product</h2>
         </Reveal>
 
-        <div className="mt-12 grid items-stretch gap-6 sm:grid-cols-2 lg:grid-cols-4">
+        <div className="mt-12 grid items-stretch gap-6 sm:grid-cols-2 lg:grid-cols-5">
           {steps.map((step, i) => (
             <Reveal key={step.step} delay={i * 0.06} className="contents">
               <div className="card h-full p-6">

@@ -463,3 +463,52 @@ body {
   margin-top: 28px;
   align-self: flex-start;
 }
+
+.stack-pill {
+  display: inline-flex;
+  align-items: center;
+  border-radius: 9999px;
+  border: 1px solid var(--color-border);
+  background-color: var(--color-background);
+  color: var(--color-foreground);
+  padding: 0.375rem 0.875rem;
+  font-size: 0.8125rem;
+  transition: border-color 0.2s ease, background-color 0.2s ease;
+}
+
+.stack-pill:hover {
+  border-color: var(--color-border-strong);
+  background-color: var(--color-background-elevated);
+}
+
+.metric-placeholder {
+  font-style: italic;
+  color: var(--color-muted);
+}
+
+.metric-card-placeholder {
+  border-style: dashed;
+}
+
+.trust-logo {
+  min-width: 7rem;
+  text-align: center;
+  transition: border-color 0.2s ease;
+}
+
+.trust-logo:hover {
+  border-color: var(--color-border-strong);
+}
+
+.hero-visual-glow {
+  background: radial-gradient(
+    ellipse 80% 60% at 50% 50%,
+    color-mix(in srgb, var(--color-foreground) 6%, transparent),
+    transparent 70%
+  );
+}
+
+.hero-window {
+  backdrop-filter: blur(8px);
+}
+

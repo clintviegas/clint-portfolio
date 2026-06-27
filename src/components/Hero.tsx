@@ -1,8 +1,8 @@
-import Image from "next/image";
 import Link from "next/link";
 import { ArrowDown } from "lucide-react";
-import { siteConfig, whatsappLink } from "@/data/portfolio";
+import { siteConfig } from "@/data/portfolio";
 import { Reveal } from "./Reveal";
+import { HeroVisual } from "./HeroVisual";
 
 export function Hero() {
   return (
@@ -15,27 +15,23 @@ export function Hero() {
           </div>
         </Reveal>
 
-        <div className="grid items-end gap-12 lg:grid-cols-[1fr_340px] lg:gap-16">
+        <div className="grid items-end gap-12 lg:grid-cols-[1fr_380px] lg:gap-16">
           <div>
             <Reveal delay={0.05}>
-              <h1 className="headline max-w-3xl">
-                Websites that convert,
-                <br />
-                <span className="text-muted">software that ships.</span>
-              </h1>
+              <h1 className="headline max-w-3xl">{siteConfig.heroHeadline}</h1>
             </Reveal>
             <Reveal delay={0.1}>
               <p className="mt-6 max-w-xl text-base leading-relaxed text-muted md:text-lg">
-                {siteConfig.heroIntro}
+                {siteConfig.heroSubheadline}
               </p>
             </Reveal>
             <Reveal delay={0.15}>
               <div className="mt-8 flex flex-wrap gap-3">
-                <Link href={whatsappLink} target="_blank" rel="noopener noreferrer" className="btn-wa">
-                  WhatsApp me
+                <Link href="#contact" className="btn-primary">
+                  Start a Project
                 </Link>
                 <Link href="#work" className="btn-secondary">
-                  See the work
+                  View Work
                   <ArrowDown size={16} />
                 </Link>
               </div>
@@ -45,17 +41,8 @@ export function Hero() {
             </Reveal>
           </div>
 
-          <Reveal delay={0.1} className="hidden lg:block">
-            <div className="relative aspect-[3/4] overflow-hidden rounded-2xl border border-border">
-              <Image
-                src="/clint-photo.png"
-                alt={siteConfig.name}
-                fill
-                priority
-                className="object-cover object-[center_12%]"
-                sizes="340px"
-              />
-            </div>
+          <Reveal delay={0.1} className="hidden lg:flex lg:justify-end">
+            <HeroVisual />
           </Reveal>
         </div>
       </div>

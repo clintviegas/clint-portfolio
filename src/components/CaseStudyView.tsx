@@ -94,11 +94,41 @@ export function CaseStudyView({ project }: { project: Project }) {
         </div>
 
         <div className="wrap section">
-          <h2 className="font-display text-2xl md:text-3xl">Results</h2>
+          <h2 className="font-display text-2xl md:text-3xl">Business impact</h2>
+          <p className="mt-4 max-w-3xl leading-relaxed text-muted">{project.impact}</p>
+
+          <h2 className="mt-12 font-display text-2xl md:text-3xl">Key metrics</h2>
+          <ul className="mt-8 grid gap-4 sm:grid-cols-2 lg:grid-cols-3">
+            {project.metrics.map((metric) => (
+              <li
+                key={`${metric.label}-${metric.value}`}
+                className={`card p-5 ${metric.isPlaceholder ? "metric-card-placeholder" : ""}`}
+              >
+                <p className="text-xs font-medium uppercase tracking-wider text-muted">{metric.label}</p>
+                <p className={`mt-2 text-sm leading-relaxed ${metric.isPlaceholder ? "metric-placeholder" : ""}`}>
+                  {metric.value}
+                </p>
+                {metric.isPlaceholder && (
+                  <span className="sr-only">Metric placeholder — replace with real data</span>
+                )}
+              </li>
+            ))}
+          </ul>
+
+          <h2 className="mt-12 font-display text-2xl md:text-3xl">Results</h2>
           <ul className="mt-8 grid gap-4 sm:grid-cols-2">
             {project.results.map((result) => (
               <li key={result} className="card p-5 text-sm leading-relaxed">
                 {result}
+              </li>
+            ))}
+          </ul>
+
+          <h3 className="mt-12 text-xs font-semibold uppercase tracking-wider text-muted">Tech stack</h3>
+          <ul className="mt-4 flex flex-wrap gap-2">
+            {project.techStack.map((tech) => (
+              <li key={tech} className="stack-pill">
+                {tech}
               </li>
             ))}
           </ul>

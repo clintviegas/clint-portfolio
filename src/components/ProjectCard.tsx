@@ -10,6 +10,16 @@ function categoryLabel(project: Project) {
   return project.category;
 }
 
+function truncate(text: string, max: number) {
+  if (text.length <= max) return text;
+  return `${text.slice(0, max).trim()}…`;
+}
+
+function topMetric(project: Project) {
+  const real = project.metrics.find((m) => !m.isPlaceholder);
+  return real ?? project.metrics[0];
+}
+
 export function ProjectCard({
   project,
   index = 0,
@@ -22,6 +32,9 @@ export function ProjectCard({
   featured?: boolean;
 }) {
   const spanFull = featured && index === 0;
+  const metric = topMetric(project);
+  const visibleStack = project.techStack.slice(0, 4);
+  const overflowCount = project.techStack.length - visibleStack.length;
 
   return (
     <Link
@@ -38,19 +51,47 @@ export function ProjectCard({
           sizes={spanFull ? "100vw" : "50vw"}
         />
       </div>
-      <div className="flex flex-1 items-start justify-between gap-4 p-5 md:p-6">
-        <div>
-          <p className="text-xs text-muted">
-            {categoryLabel(project)}
-            {project.year ? ` · ${project.year}` : ""}
-          </p>
-          <h3 className="mt-1 font-display text-xl md:text-2xl">{project.title}</h3>
-          <p className="mt-2 text-sm text-muted">{project.description}</p>
+      <div className="flex flex-1 flex-col gap-4 p-5 md:p-6">
+        <div className="flex items-start justify-between gap-4">
+          <div>
+            <p className="text-xs text-muted">
+              {categoryLabel(project)}
+              {project.year ? ` · ${project.year}` : ""}
+            </p>
+            <h3 className="mt-1 font-display text-xl md:text-2xl">{project.title}</h3>
+            <p className="mt-2 text-sm text-muted">{project.description}</p>
+          </div>
+          <ArrowUpRight
+            size={20}
+            className="shrink-0 text-muted transition-transform group-hover:-translate-y-0.5 group-hover:translate-x-0.5 group-hover:text-foreground"
+          />
         </div>
-        <ArrowUpRight
-          size={20}
-          className="shrink-0 text-muted transition-transform group-hover:-translate-y-0.5 group-hover:translate-x-0.5 group-hover:text-foreground"
-        />
+
+        <p className="text-sm leading-relaxed text-foreground/90">{project.impact}</p>
+
+        <div className="rounded-lg border border-border bg-background px-4 py-3 text-sm">
+          <p className="text-xs font-medium uppercase tracking-wider text-muted">Challenge</p>
+          <p className="mt-1 text-muted">{truncate(project.challenge, 120)}</p>
+          {metric && (
+            <>
+              <p className="mt-3 text-xs font-medium uppercase tracking-wider text-muted">Result</p>
+              <p className={`mt-1 ${metric.isPlaceholder ? "metric-placeholder" : "text-foreground"}`}>
+                {metric.isPlaceholder ? metric.value : `${metric.label}: ${metric.value}`}
+              </p>
+            </>
+          )}
+        </div>
+
+        <ul className="mt-auto flex flex-wrap gap-2">
+          {visibleStack.map((tech) => (
+            <li key={tech} className="stack-pill text-xs">
+              {tech}
+            </li>
+          ))}
+          {overflowCount > 0 && (
+            <li className="stack-pill text-xs text-muted">+{overflowCount}</li>
+          )}
+        </ul>
       </div>
     </Link>
   );
