@@ -29,7 +29,7 @@ DEPLOY_URL="$(npx vercel ls clint-portfolio --prod 2>/dev/null | grep -oE 'https
 
 if [[ -n "$DEPLOY_URL" ]]; then
   echo "→ Aliasing clint-viegas.vercel.app..."
-  npx vercel alias "$DEPLOY_URL" clint-viegas.vercel.app --yes
+  npx vercel alias "$DEPLOY_URL" clint-viegas.vercel.app
 fi
 
 echo ""
