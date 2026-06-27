@@ -18,7 +18,7 @@ const body = Inter({
   display: "swap",
 });
 
-const seoTitle = `${siteConfig.name} | AI Full-Stack Developer`;
+const seoTitle = `${siteConfig.name} | Web & Software Developer`;
 
 export const metadata: Metadata = {
   metadataBase: new URL(siteConfig.url),

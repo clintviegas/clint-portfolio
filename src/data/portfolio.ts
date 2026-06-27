@@ -11,26 +11,97 @@ export const siteConfig = {
   // TODO: Add your Calendly or scheduling URL (falls back to WhatsApp until set)
   calendlyUrl: "",
   description:
-    "AI full-stack developer building websites, SaaS products, dashboards, automations, and modern business software.",
-  tagline: "AI-powered websites, SaaS & business software — built to grow.",
+    "Freelance web and software developer building websites, SaaS products, dashboards, automations, and business software.",
+  tagline: "Websites, SaaS & business software — built to grow.",
   keywords: [
     "Clint Viegas",
-    "AI full-stack developer",
-    "AI developer for hire",
-    "SaaS developer",
+    "web and software developer",
     "freelance web developer Vancouver",
     "hire web developer Canada",
+    "SaaS developer for hire",
     "website developer UAE",
     "custom web app development",
-    "automation developer",
+    "freelance software developer",
     "Next.js developer",
   ],
   availability: "Available for freelance & remote roles",
   heroBadge: "Available for freelance & remote roles",
-  heroHeadline: "AI Full-Stack Developer building software that grows businesses.",
+  heroHeadline: "Web & Software Developer building products that grow businesses.",
   heroSubheadline:
-    "I build AI-powered websites, SaaS products, dashboards, and automations for startups, agencies, and growing businesses.",
+    "I build websites, SaaS products, dashboards, and automations for startups, agencies, and growing businesses.",
+  photo: "/clint-photo.png",
 };
+
+export const aboutMe = {
+  title: "Clint Viegas",
+  subtitle: "Web & Software Developer",
+  paragraphs: [
+    "I'm a Full-Stack Developer passionate about building modern web applications, scalable software, and digital experiences that make a real impact.",
+    "I enjoy transforming ideas into products—from high-converting marketing websites and custom business platforms to SaaS applications, dashboards, and internal tools. My approach combines clean architecture, thoughtful user experience, and modern technologies to create solutions that are fast, reliable, and built to scale.",
+    "What I enjoy most about software development is solving problems. Every project presents a unique challenge, whether it's simplifying complex workflows, improving business operations, or creating intuitive experiences that people genuinely enjoy using. I'm always looking for better ways to build, optimize, and continuously improve every product I work on.",
+    "Outside of development, I enjoy exploring emerging technologies, experimenting with new tools, and staying up to date with the rapidly evolving software landscape. I'm constantly learning because great developers never stop improving.",
+    "I'm always excited to collaborate with startups, agencies, and businesses to build products that are thoughtful, performant, and designed for long-term success.",
+  ],
+};
+
+export type HeroShowcaseWindow = {
+  src: string;
+  alt: string;
+  href: string;
+  label: string;
+  top: string;
+  left?: string;
+  right?: string;
+  width: string;
+};
+
+export const heroShowcaseWindows: HeroShowcaseWindow[] = [
+  {
+    src: "/projects/celpipace.png",
+    alt: "CELPIPACE SaaS platform",
+    href: "https://www.celpipace.ca",
+    label: "CELPIPACE",
+    top: "0%",
+    left: "0%",
+    width: "47%",
+  },
+  {
+    src: "/projects/leo-india.png",
+    alt: "Leo India creative agency site",
+    href: "https://leo-website-kohl.vercel.app",
+    label: "Leo India",
+    top: "0%",
+    right: "0%",
+    width: "47%",
+  },
+  {
+    src: "/projects/ganesh.png",
+    alt: "Ganesh Khatri cinematographer portfolio",
+    href: "https://vibewithgannu.vercel.app",
+    label: "Ganesh Khatri",
+    top: "34%",
+    left: "2%",
+    width: "45%",
+  },
+  {
+    src: "/projects/gaurab-bhandari.png",
+    alt: "Gaurab Bhandari filmmaker portfolio",
+    href: "https://demo.gaurabbhandari.com",
+    label: "Gaurab Bhandari",
+    top: "34%",
+    right: "0%",
+    width: "47%",
+  },
+  {
+    src: "/projects/celeson.png",
+    alt: "Celeson Enterprise corporate website",
+    href: "https://celeson-website.vercel.app",
+    label: "Celeson",
+    top: "68%",
+    left: "26%",
+    width: "48%",
+  },
+];
 
 export type ProjectMetric = {
   label: string;
@@ -494,12 +565,12 @@ export const process = [
   {
     step: "02",
     title: "Design",
-    body: "UX direction, architecture, and AI integration plan — clear scope before a line of code is written.",
+    body: "UX direction, architecture, and technical plan — clear scope before a line of code is written.",
   },
   {
     step: "03",
     title: "Build",
-    body: "Fast iteration with modern AI tooling. Regular previews and your feedback at every stage.",
+    body: "Fast iteration with modern tooling. Regular previews and your feedback at every stage.",
   },
   {
     step: "04",
@@ -556,7 +627,7 @@ export const faqs = [
   },
   {
     q: "What types of projects do you take?",
-    a: "AI-powered websites, SaaS platforms, dashboards, automations, and business software. If it runs in a browser, I can build it.",
+    a: "Websites, SaaS platforms, dashboards, automations, and business software. If it runs in a browser, I can build it.",
   },
 ];
 

@@ -10,7 +10,7 @@ Run these from the project root, or use the npm shortcuts.
 npm run local
 ```
 
-Opens **http://localhost:3000** — kills stale servers and clears cache first.
+Opens **http://localhost:3001** — kills stale servers on 3000/3001 and clears cache first.
 
 ## Deploy live
 

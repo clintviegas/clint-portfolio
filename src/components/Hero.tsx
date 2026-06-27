@@ -15,7 +15,7 @@ export function Hero() {
           </div>
         </Reveal>
 
-        <div className="grid items-end gap-12 lg:grid-cols-[1fr_380px] lg:gap-16">
+        <div className="grid items-start gap-12 lg:grid-cols-[1fr_420px] lg:gap-16">
           <div>
             <Reveal delay={0.05}>
               <h1 className="headline max-w-3xl">{siteConfig.heroHeadline}</h1>

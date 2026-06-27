@@ -2,8 +2,8 @@
   <rect width="1200" height="630" fill="#09090B"/>
   <rect x="80" y="80" width="1040" height="470" rx="24" stroke="#27272A" stroke-width="2"/>
   <text x="120" y="200" fill="#FAFAFA" font-family="system-ui, sans-serif" font-size="56" font-weight="700">Clint Viegas</text>
-  <text x="120" y="280" fill="#A1A1AA" font-family="system-ui, sans-serif" font-size="32" font-weight="500">AI Full-Stack Developer</text>
-  <text x="120" y="360" fill="#71717A" font-family="system-ui, sans-serif" font-size="22">Websites · SaaS · Dashboards · Automations</text>
+  <text x="120" y="280" fill="#A1A1AA" font-family="system-ui, sans-serif" font-size="32" font-weight="500">Web &amp; Software Developer</text>
+  <text x="120" y="360" fill="#71717A" font-family="system-ui, sans-serif" font-size="22">Websites · SaaS · Dashboards · Business Software</text>
   <circle cx="120" cy="430" r="6" fill="#34D399"/>
   <text x="140" y="438" fill="#A1A1AA" font-family="system-ui, sans-serif" font-size="18">clint-viegas.vercel.app</text>
 </svg>
