@@ -5,9 +5,7 @@ import { Proof } from "@/components/Proof";
 import { WorkMarquee } from "@/components/WorkMarquee";
 import { Work } from "@/components/Work";
 import { FeaturedQuote } from "@/components/FeaturedQuote";
-import { Demos } from "@/components/Demos";
 import { Services } from "@/components/Services";
-import { AIStack } from "@/components/AIStack";
 import { FounderNote } from "@/components/FounderNote";
 import { Process } from "@/components/Process";
 import { Comparison } from "@/components/Comparison";
@@ -27,9 +25,7 @@ export default function HomePage() {
         <Proof />
         <Work />
         <FeaturedQuote />
-        <Demos />
         <Services />
-        <AIStack />
         <FounderNote />
         <Process />
         <Comparison />

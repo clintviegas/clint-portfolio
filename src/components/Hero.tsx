@@ -36,9 +36,6 @@ export function Hero() {
                 </Link>
               </div>
             </Reveal>
-            <Reveal delay={0.2}>
-              <p className="mt-8 text-xs text-muted">Based in Vancouver · Available worldwide</p>
-            </Reveal>
           </div>
 
           <Reveal delay={0.1} className="hidden lg:flex lg:justify-end">

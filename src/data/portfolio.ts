@@ -36,11 +36,10 @@ export const aboutMe = {
   title: "Clint Viegas",
   subtitle: "Web & Software Developer",
   paragraphs: [
-    "I'm a Full-Stack Developer passionate about building modern web applications, scalable software, and digital experiences that make a real impact.",
-    "I enjoy transforming ideas into products—from high-converting marketing websites and custom business platforms to SaaS applications, dashboards, and internal tools. My approach combines clean architecture, thoughtful user experience, and modern technologies to create solutions that are fast, reliable, and built to scale.",
-    "What I enjoy most about software development is solving problems. Every project presents a unique challenge, whether it's simplifying complex workflows, improving business operations, or creating intuitive experiences that people genuinely enjoy using. I'm always looking for better ways to build, optimize, and continuously improve every product I work on.",
-    "Outside of development, I enjoy exploring emerging technologies, experimenting with new tools, and staying up to date with the rapidly evolving software landscape. I'm constantly learning because great developers never stop improving.",
-    "I'm always excited to collaborate with startups, agencies, and businesses to build products that are thoughtful, performant, and designed for long-term success.",
+    "I love building things. Not in a \"put it on my LinkedIn\" way — in a \"stay up way too late because the problem is interesting\" way. Give me a blank repo and a real problem and I'm genuinely happy.",
+    "I've moved across three countries, figured things out in cities where I knew nobody, and somewhere along the way got hooked on turning ideas into software people actually use. I built my own SaaS from scratch — not as a side project to talk about, but as a real product with real users paying real money. That taught me more than any job ever could.",
+    "When I'm not writing code, I'm probably on a golf course, hiking somewhere I haven't been, or deep in a rabbit hole about something completely unrelated to tech. I think the best developers are curious about everything, not just code.",
+    "I work best when I own the whole thing — the thinking, the building, the shipping. No waiting on approvals, no committee design. Just good work, done well, delivered fast.",
   ],
 };
 
@@ -607,6 +606,18 @@ export const testimonials = [
       "Our corporate site reflects 33+ years of expertise across India and the GCC. Clint understood our markets and delivered a presence we are proud of.",
     name: "Arun Alphones",
     role: "Celeson Enterprise",
+  },
+  {
+    quote:
+      "CELPIPACE made my CELPIP prep so much easier. The practice tests felt real, the scoring helped me focus on weak areas, and I got the score I needed for my PR application. Highly recommend it.",
+    name: "Jaskirat Kaur",
+    role: "CELPIPACE Student",
+  },
+  {
+    quote:
+      "I tried other prep resources but nothing compared to CELPIPACE. The AI scoring gave me instant feedback and the question bank is massive. It genuinely helped me improve and feel confident on test day.",
+    name: "Caroline Sanclamente",
+    role: "CELPIPACE Student",
   },
 ];
 
